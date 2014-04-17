@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>features grid</title>
+
+    <script type="text/javascript" src="/apps/2.0rc2/sdk.js"></script>
+
+    <script type="text/javascript">
+        Rally.onReady(function () {
+                Ext.define('CustomApp', {
+    extend: 'Rally.app.App',
+    componentCls: 'app',
+    launch: function() {
+                this.add({
+                    xtype: 'rallygrid',
+                    model: 'PortfolioItem/Feature',
+                    enableRanking: true,
+                    columnCfgs: [{
+                        dataIndex: 'DragAndDropRank',
+                        maxWidth: 50
+                    },{
+                        dataIndex: 'FormattedID',
+                        maxWidth: 50
+                    },{
+                        dataIndex: 'Name',
+                        flex: 1,
+                        minWidth: 160
+                    },
+                    {
+                        dataIndex: 'Description',
+                        flex: 1,
+                        minWidth: 300
+
+                    }]
+                });
+    }
+});
+
+
+
+            Rally.launchApp('CustomApp', {
+                name:"features grid",
+	            parentRepos:""
+            });
+
+        });
+    </script>
+
+
+    <style type="text/css">
+        .app {
+     /* Add app styles here */
+}
+
+    </style>
+</head>
+<body></body>
+</html>
