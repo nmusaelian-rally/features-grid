@@ -6,6 +6,12 @@ Ext.define('CustomApp', {
                     xtype: 'rallygrid',
                     model: 'PortfolioItem/Feature',
                     enableRanking: true,
+                    storeConfig: {
+                      context: {
+                          context: this.getContext().getDataContext()
+                          //project: '/project/12527515559' //you may comment out the line above and hardcode any valid project ObjectID here
+                      }
+                    },
                     columnCfgs: [{
                         dataIndex: 'DragAndDropRank',
                         maxWidth: 50
@@ -18,11 +24,11 @@ Ext.define('CustomApp', {
                         minWidth: 160
                     },
                     {
-                        dataIndex: 'Description',
+                        dataIndex: 'Project',
                         flex: 1,
-                        minWidth: 300
-
-                    }]
+                        minWidth: 160
+                    }
+                    ]
                 });
     }
 });
