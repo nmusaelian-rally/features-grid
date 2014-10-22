@@ -3,11 +3,11 @@
 <head>
     <title>features grid</title>
 
-    <script type="text/javascript" src="/apps/2.0rc2/sdk.js"></script>
+    <script type="text/javascript" src="/apps/2.0rc3/sdk.js"></script>
 
     <script type="text/javascript">
         Rally.onReady(function () {
-                Ext.define("CustomApp",{extend:"Rally.app.App",componentCls:"app",launch:function(){this.add({xtype:"rallygrid",model:"PortfolioItem/Feature",enableRanking:!0,storeConfig:{context:{context:this.getContext().getDataContext()}},columnCfgs:[{dataIndex:"DragAndDropRank",maxWidth:50},{dataIndex:"FormattedID",maxWidth:50},{dataIndex:"Name",flex:1,minWidth:160},{dataIndex:"Project",flex:1,minWidth:160}]})}});
+                Ext.define("CustomApp",{extend:"Rally.app.App",componentCls:"app",launch:function(){this.add({xtype:"rallygrid",model:"PortfolioItem/Feature",enableRanking:!0,storeConfig:{},columnCfgs:[{dataIndex:"FormattedID",maxWidth:50},{dataIndex:"Name",maxWidth:200},{dataIndex:"Project",maxWidth:100},{dataIndex:"PercentDoneByStoryCount"},{dataIndex:"PercentDoneByStoryPlanEstimate"}]})}});
 
             Rally.launchApp('CustomApp', {
                 name:"features grid",

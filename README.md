@@ -6,6 +6,10 @@ When the gird is sorted by Rank, the drag-n-drop icons appear in the left column
 ![](pic.png)
 ![](pic2.png)
 
+Another variation of the grid shows PercentDoneByStoryCount and PercentDoneByStoryPlanEstimate columns:
+
+![](pic3.png)
+
 This app comes AS IS. It is not supported by Rally support.
 
 ## License

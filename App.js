@@ -6,27 +6,23 @@ Ext.define('CustomApp', {
                     xtype: 'rallygrid',
                     model: 'PortfolioItem/Feature',
                     enableRanking: true,
-                    storeConfig: {
-                      context: {
-                          context: this.getContext().getDataContext()
-                          //project: '/project/12527515559' //you may comment out the line above and hardcode any valid project ObjectID here
-                      }
-                    },
+                    storeConfig: {},
                     columnCfgs: [{
-                        dataIndex: 'DragAndDropRank',
-                        maxWidth: 50
-                    },{
                         dataIndex: 'FormattedID',
                         maxWidth: 50
                     },{
                         dataIndex: 'Name',
-                        flex: 1,
-                        minWidth: 160
+                        maxWidth:200
                     },
                     {
                         dataIndex: 'Project',
-                        flex: 1,
-                        minWidth: 160
+                        maxWidth:100
+                    },
+                    {
+                        dataIndex: 'PercentDoneByStoryCount'
+                    },
+                    {
+                        dataIndex: 'PercentDoneByStoryPlanEstimate'
                     }
                     ]
                 });
